@@ -23,6 +23,7 @@ const router = createBrowserRouter([
     
   ])
 
+
   return (
     <>
       <main className='min-h-screen flex flex-col'>
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
       </main>
     </>
   )
+  
 }
 
 export default App

@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 
-export default function Card({imgSrc}) {
+export default function Card({imgSrc,onClick}) {
 
     // console.log(imgSrc);
 
@@ -8,7 +8,7 @@ export default function Card({imgSrc}) {
     
   return (
     <>
-        <div id="card " className='group relative'>
+        <div id="card " className='group relative cardSelect' onClick={onClick}>
             <div>
                 <img src={imgSrc} alt="" className='w-full ' ref={imgDom} />
             </div>

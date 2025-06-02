@@ -32,7 +32,7 @@ export default function Contacts() {
         </div>
 
         <form className="bg-white rounded-xl shadow-2xl p-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Name Field */}
+          
           <div className="relative group" data-aos="fade-up" data-aos-delay="100">
             <input
               className="w-full bg-gray-50 border-b-2 border-blue-400 pt-6 pb-2 px-4 text-gray-800 focus:outline-none focus:border-blue-600 peer transition-colors"
@@ -50,7 +50,7 @@ export default function Contacts() {
             </label>
           </div>
 
-          {/* Email Field */}
+          
           <div className="relative group" data-aos="fade-up" data-aos-delay="150">
             <input
               className="w-full bg-gray-50 border-b-2 border-indigo-400 pt-6 pb-2 px-4 text-gray-800 focus:outline-none focus:border-indigo-600 peer transition-colors"
@@ -68,7 +68,7 @@ export default function Contacts() {
             </label>
           </div>
 
-               {/* Age Field - NOW FULL WIDTH */}
+           
           <div className="relative group md:col-span-2" data-aos="fade-up" data-aos-delay="200">
             <input
               className="w-full bg-gray-50 border-b-2 border-purple-400 pt-6 pb-2 px-4 text-gray-800 focus:outline-none focus:border-purple-600 peer transition-colors"
@@ -87,7 +87,7 @@ export default function Contacts() {
           </div>
 
 
-          {/* Message Field - spans full width */}
+          
           <div className="relative group md:col-span-2" data-aos="fade-up" data-aos-delay="250">
             <textarea
               className="w-full bg-gray-50 border-b-2 border-cyan-400 pt-6 pb-2 px-4 text-gray-800 focus:outline-none focus:border-cyan-600 peer transition-colors min-h-[120px]"
@@ -107,7 +107,7 @@ export default function Contacts() {
           <div className="md:col-span-2" data-aos="fade-up" data-aos-delay="300">
             <button
               type="submit"
-              className="w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-bold rounded-lg hover:shadow-lg hover:shadow-blue-500/30 transition-all"
+              className="cursor-pointer w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-bold rounded-lg hover:shadow-lg hover:shadow-blue-500/30 transition-all"
             >
               Send Message
             </button>

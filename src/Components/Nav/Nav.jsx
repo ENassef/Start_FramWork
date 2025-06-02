@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -12,6 +12,26 @@ gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 export default function Nav() {
   const brand = useRef();
+  
+  const [resize, setResize] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setResize(true);
+        document.querySelector('nav').classList.remove('py-8')        
+        document.querySelector('nav').classList.add('py-4')        
+      } else {
+        setResize(false);
+        document.querySelector('nav').classList.add('py-8')        
+        document.querySelector('nav').classList.remove('py-4')        
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
     useEffect(() => {
         // Split the text into individual letters
@@ -49,7 +69,7 @@ export default function Nav() {
   }, []);
 
   return (
-    <nav className='capitalize flex fixed top-0 left-0 right-0 bg-[#2C3E50] text-white justify-around py-8 italic z-50'>
+    <nav className='capitalize flex fixed top-0 left-0 right-0 bg-[#2C3E50] text-white justify-around py-8 italic z-50 transition-all duration-500'>
       <div className="brand">
         
         <Link  
